@@ -4,12 +4,11 @@ import Meme from "./Meme"
 const MemeList = () => {
     const memes = useSelector(store => store.memes)
     return (
-        <>
-        <MemeForm />
+        <div className="container" style={{display: "flex"}}>
         {memes.map(meme => (
             <Meme key={meme.id} meme={meme} />
         ))}
-        </>
+        </div>
     )
 }
 

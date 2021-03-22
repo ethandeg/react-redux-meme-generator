@@ -20,15 +20,31 @@ const MemeForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor='img'>Image Url:</label>
-            <input type="text" id='img' name='img' onChange={handleChange} value={formData.img}/>
-            <label htmlFor="topText">Top Text:</label>
-            <input type="text" id="topText" name="topText" onChange={handleChange} value={formData.topText} />
-            <label htmlFor="bottomText">Bottom Text:</label>
-            <input type="text" id="bottomText" name="bottomText" onChange={handleChange} value={formData.bottomText} />
-            <button>Submit</button>
-        </form>
+        <div style={{marginLeft: "25%"}} className="mt-5">
+        <div className="card col-8">
+            <div className="card-body">
+                <h2 style={{textAlign: "center"}} className="display-3 text-info">Create a Meme:</h2>
+                <form onSubmit={handleSubmit} className="form-control">
+                    <div className="form-group">
+                        <label htmlFor='img'>Image Url:</label>
+                        <input className="form-control" type="text" id='img' name='img' onChange={handleChange} value={formData.img}/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="topText">Top Text:</label>
+                        <input className="form-control" type="text" id="topText" name="topText" onChange={handleChange} value={formData.topText} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="bottomText">Bottom Text:</label>
+                        <input className="form-control" type="text" id="bottomText" name="bottomText" onChange={handleChange} value={formData.bottomText} />
+                    </div>
+                    <div className="form-group my-3">
+                        <button className="btn btn-outline-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+
         
     )
 }
